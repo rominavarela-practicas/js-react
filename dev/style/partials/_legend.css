@@ -1,0 +1,10 @@
+#content legend {
+  height: 3vw;
+
+  & * {
+    display: inline-block;
+    float: left;
+    font-weight: bold;
+    font-size: 2vw;
+  }
+}

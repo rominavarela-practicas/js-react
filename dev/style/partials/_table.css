@@ -1,0 +1,23 @@
+table {
+  & tr {
+    cursor: pointer;
+
+    & th {
+      background-color: var(--bg-color-hard);
+    }
+
+    & td {
+      width: 30%;
+
+      & * {
+        display: inline-block;
+        vertical-align: top;
+        padding: 0.8vw;
+      }
+    }
+  }
+
+  & tr:hover {
+    background-color: var(--bg-color-soft);
+  }
+}

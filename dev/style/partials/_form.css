@@ -1,0 +1,23 @@
+#content {
+  & .input-append {
+    margin-left: 3vw;
+  }
+  & .input-append:first-child {
+    margin-left: 0vw;
+  }
+
+  & .input-append > legend{
+    margin: 2vw 0vw;
+    padding: 0vw;
+  }
+
+  & .input-append > * {
+    font-size: 1.4rem;
+    margin-left: 3vw;
+  }
+
+  & input.span2 {
+    width: 60%;
+    min-width: 10em;
+  }
+}
