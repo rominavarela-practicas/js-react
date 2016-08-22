@@ -1,4 +1,5 @@
 import "../style/style.css"
+import $ from 'jquery';
 import React, { Component } from 'react';
 import { render } from 'react-dom'
 import { ServicesUrl } from '../js/commons/ServicesUrl.jsx'
