@@ -1,6 +1,5 @@
 import $ from 'jquery';
 import React, { Component } from 'react';
-import { render } from 'react-dom'
 import { ServicesUrl } from "../commons/ServicesUrl.jsx"
 
 var view;
@@ -65,8 +64,3 @@ export default class AllPage extends Component {
       </div> );
   }
 }
-
-/*render(
-  <AllPage />,
-  document.getElementById('content')
-);*/
