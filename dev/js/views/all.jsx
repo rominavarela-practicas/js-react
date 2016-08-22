@@ -1,12 +1,11 @@
-import "../style/style.css"
 import $ from 'jquery';
 import React, { Component } from 'react';
 import { render } from 'react-dom'
-import { ServicesUrl } from "../js/commons/ServicesUrl.jsx"
+import { ServicesUrl } from "../commons/ServicesUrl.jsx"
 
 var view;
 
-class AllPage extends Component {
+export default class AllPage extends Component {
   constructor() {
     super();
     view = this;
@@ -67,7 +66,7 @@ class AllPage extends Component {
   }
 }
 
-render(
+/*render(
   <AllPage />,
   document.getElementById('content')
-);
+);*/

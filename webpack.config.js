@@ -25,8 +25,7 @@ console.log();
 
 module.exports = {
     entry: {
-      index: path.join( PATHS.js , "index.jsx"),
-      all: path.join( PATHS.js , "all.jsx")
+      index: path.join( PATHS.js , "index.jsx")
     },
     output: {
         path: PATHS.bundle ,
