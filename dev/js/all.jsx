@@ -3,26 +3,27 @@ import React, { Component } from 'react';
 import { render } from 'react-dom'
 import { ServicesUrl } from "../js/commons/ServicesUrl.jsx"
 
+var view;
+
 class AllPage extends Component {
   constructor() {
-    super()
-    this.state = {
-        shortcuts: undefined
-    }
+    super();
+    view = this;
+    view.baseUrl = ServicesUrl + '/' + 'shortcut';
+    view.state = { shortcuts: undefined };
   }
 
   componentWillMount() {
-    var _this = this;
     $.ajax({
-        url : ServicesUrl + "/urls/all",
+        url : view.baseUrl,
         type : "get",
         dataType:"json",
         success : function(data) {
           console.log("success!")
           console.log(data);
-          _this.setState({ shortcuts: data.shortcuts });
+          view.setState({ shortcuts: data });
         },
-        error: function() {
+        error: function(err) {
           console.log("err!")
           console.log(err);
         }
@@ -30,7 +31,7 @@ class AllPage extends Component {
   }
 
   render() {
-    return !!this.state.shortcuts && ( <div className="col-md-12">
+    return !!view.state.shortcuts && ( <div className="col-md-12">
         <table className="table">
             <tbody>
 
@@ -41,12 +42,12 @@ class AllPage extends Component {
               </tr>
 
               {
-                this.state.shortcuts.map(function (shortcut) {
+                view.state.shortcuts.map(function (shortcut) {
                   return (
                     <tr key={ shortcut.id } >
                       <td>
                         <i className='icon'></i>
-                        <span> { ServicesUrl + "/urls/" + shortcut.id } </span>
+                        <span> { ServicesUrl + '/' + shortcut.id } </span>
                       </td>
                       <td>
                         <span> { shortcut.url } </span>
