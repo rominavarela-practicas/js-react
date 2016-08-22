@@ -1,0 +1,21 @@
+.navbar {
+  & .navbar-header {
+    font-weight: bold;
+    font-size: 1.5em;
+    padding: 0.8em;
+  }
+  & li {
+    background-color: var(--bg-color-soft);
+    margin: 0.5em;
+    & a {
+      color: black;
+    }
+  }
+  & li:hover a {
+    font-weight: bold;
+    background-color: unset;
+  }
+  & li:focus a {
+    background-color: unset;
+  }
+}
